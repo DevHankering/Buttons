@@ -1,0 +1,342 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root{
+    --tomato:tomato;
+    --white:#fff;
+    --transparent:transparent;
+}
+body{
+    background-color: var(--tomato);
+    padding:50px;
+}
+body{
+    width:70%;
+    margin:auto;
+}
+button{
+    margin:50px;
+    font-size:22px;
+    padding:0.8rem 2.3rem;
+    cursor:pointer;
+    border:none;
+    letter-spacing:0.1rem;
+    font-weight:bold;
+}
+
+
+/*============================first_Button============================*/
+
+.one{
+    background-color: var(--white);
+    color:var(--tomato);
+    border:2px solid var(--white);
+    transition:0.3s;
+}
+.one:hover{
+    background-color:var(--transparent);
+    color:var(--white);
+
+}
+
+
+/*=================================Second_Button========================*/
+
+
+
+.two{
+    background-color: var(--transparent);
+    color:var(--white);
+    position:relative;
+
+}
+.two::before{
+ content:"";
+ position:absolute;
+ bottom:0;
+ right:0;
+ width:2px;
+ height:0%;
+ background-color: var(--white);
+ transition-property:height;
+ transition-duration:0.3s;
+}
+.two::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    height:2px;
+    width:0%;
+    background-color: var(--white);
+    transition-property:width;
+    transition-duration:0.3s;
+}
+.two:hover::before{
+    height:100%;
+}
+.two:hover::after{
+    width:100%;
+}
+
+
+
+/*==================================Three===============================*/
+
+
+
+.three{
+    background-color: var(--transparent);
+    color:var(--white);
+    position:relative;
+    transition-property:letter-spacing;
+    transition-duration:0.3s;
+}
+.three::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: var(--white);
+    height:2px;
+    width:0%;
+    transition-property:width;
+    transition-duration:0.3s;
+}
+.three::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color: var(--white);
+    height:2px;
+    width:0%;
+    transition-property:width;
+    transition-duration:0.3s;
+}
+.three:hover{
+    letter-spacing:0.2rem;
+}
+.three:hover::before,.three:hover::after{
+    width:100%;
+
+}
+
+
+
+/*============================Four=======================*/
+
+
+.four{
+    background-color: var(--transparent);
+    color:var(--white);
+    position:relative;
+
+}
+.four::before{
+content:"";
+position:absolute;
+top:0;
+right:0;
+width:15px;
+height:15px;
+border:2px solid white;
+border-color:#fff #fff transparent transparent; 
+transition:all 0.3s;
+}
+
+.four::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:15px;
+    height:15px;
+    border:2px solid white;
+    border-color: transparent transparent #fff #fff; 
+    transition:all 0.3s;
+    }
+    
+.four:hover::after, .four:hover::before{
+    width:100%;
+    height:100%;
+}
+
+/*==========================five============================*/
+
+.five{
+    background-color: var(--transparent);
+    border:2px solid var(--white);
+    color:var(--white);
+    transition:box-shadow 0.3s;
+    position:relative;
+}
+.five:hover{
+    box-shadow:inset 0px 0px 15px #fff;
+}
+.five:before{
+    content:"";
+    width:100%;
+    height:100%;
+    border:2px solid var(--white);
+    position:absolute;
+    left:0;
+    top:-2px;
+    transition:transform 0.3s,border-color 0.3s;
+}
+.five:hover:before{
+    transform:scale(1.3);
+    border-color:transparent;
+}
+
+
+
+/*============================Six==========================*/
+
+.six{
+    background-color: var(--transparent);
+    border:2px solid var(--white);
+    color:var(--white);
+    transition:0.3s;
+    position:relative;
+    transition-timing-function:cubic-bezier(1,.04,.79,.39);
+}
+.six:hover{
+color:var(--tomato);
+}
+.six::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0;
+    background-color: var(--white);
+    transition:0.3s;
+    transition-timing-function:cubic-bezier(1,.04,.79,.39);
+    z-index:-1;
+}
+.six:hover::before{
+    width:100%;
+}
+
+/*===========================seven================================*/
+.seven{
+    position:relative;
+    color:var(--white);
+    background-color: var(--transparent);
+    border:2px solid var(--white);
+    overflow:hidden;
+    transition:color 0.3s; 
+}
+.seven:hover{
+    color:var(--tomato);
+}
+.seven:before{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:260%;
+    top:-40px;
+    left:-15px;
+    background-color: var(--white);
+    transform:rotate(20deg);
+    transition:width 0.3s;
+    z-index:-1;
+}
+.seven:hover:before{
+    width:140%;
+}
+
+
+
+
+/*==========================eight=================================*/
+
+
+.eight{
+    color:var(--white);
+    background-color: var(--transparent);
+    border:2px solid var(--white);
+    position:relative;
+    transition:color 0.3s;
+}
+.eight:hover{
+    color:var(--tomato);
+}
+.eight:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+    background-color: var(--white);
+    transition:height 0.6s;
+    z-index:-1;
+}
+.eight:hover:before{
+    height:100%;
+}
+.eight:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0;
+    background-color: var(--white);
+    transition:height 0.6s;
+    z-index:-3;
+}
+.eight:hover:after{
+    height:100%;
+}
+
+
+/*=============================nine=================================*/
+
+.nine{
+    background-color: var(--transparent);
+    color:var(--white);
+    border:2px solid var(--white);
+    transition:border-radius 0.3s;
+}
+.nine:hover{
+    border-radius:50px;
+}
+
+
+
+/*==============================ten================================*/
+
+.ten{
+    color:var(--white);
+    background-color: var(--transparent);
+    border:2px solid var(--white);
+    transition:color 0.3s;
+    position:relative;
+    overflow:hidden;
+}
+.ten:hover{
+    color:var(--tomato);
+}
+.ten:before{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:0%;
+    border-radius:50%;
+    background-color: var(--white);
+    top:-30px;
+    left:-30px;
+    transition:width 0.3s, height 0.3s;
+    z-index:-1;
+}
+.ten:hover:before{
+    width:130%;
+    height:200%;
+
+}
